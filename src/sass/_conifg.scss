@@ -1,0 +1,21 @@
+@import './variable';
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    a{
+        text-decoration: none;
+        color: $color_gray;
+    }
+    button{
+        cursor: pointer;
+    }
+}
+
