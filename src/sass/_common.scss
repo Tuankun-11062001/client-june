@@ -1,0 +1,685 @@
+.layout-app {
+    width:87.5%;
+    margin:0 auto;
+}
+
+.info_deliver_card{
+    @include overlay(10001);
+    &-container{
+        background: $color_white;
+        padding:2rem;
+        border-radius: 2rem;
+        width:73rem;
+    }
+    &-head{
+        @include flex(space-between,center);
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid $color_gray;
+        &-title{
+            font-size: 2.5rem;
+            color:$color_orange;
+        }
+        &-button{
+            background: transparent;
+            border:none;
+            color:$color_gray;
+            @include transition;
+            svg{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            &:hover{
+                color:$color_orange;
+            }
+        }
+    }
+    &-body{
+        margin-top:2rem;
+        @include flex();
+    }
+    &-image{
+        width:30rem;
+        height: 30rem;
+        img{
+            @include image;
+        }
+    }
+    &-detail{
+        flex:1;
+        @include flex(start,start,2rem,column);
+        &-title{
+            font-size: 2rem;
+            color:$color-black;
+        }
+        &-context{
+            @include flex(start,start,1rem,column);
+        }
+        &-group{
+            @include flex;
+            font-size: 1.7rem;
+            label{
+                color:$color_gray;
+                width: 6rem;
+            }
+            p{
+                flex:1;
+            }
+        }
+        &-button{
+            button{
+                padding:1rem 2rem;
+                border:0.1rem solid $color-gray;
+                background:transparent;
+                color:$color-gray;
+                @include transition;
+                &:hover{
+                    color:$color-white;
+                    border:0.1rem solid $color_orange;
+                    background:$color-orange;
+                }
+                &:first-child{
+                    margin-right: 2rem;
+                }
+            }
+        }
+        &-deliver{
+            width: 100%;
+            @include flex(space-between,center);
+            &-group{
+                text-align: center;
+                font-size: 1.5rem;
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                }
+                label{
+                    display: block
+                }
+                &.active{
+                    color:$color_orange;
+                }
+            }
+            &-line{
+                width: 100%;
+                height: 0.2rem;
+                background:rgba($color_gray,0.3);
+                border-radius: 2rem;
+            }
+        }
+    }
+}
+
+.info_bought_card{
+    @include overlay(10001);
+    &-container{
+        background: $color_white;
+        padding:2rem;
+        border-radius: 2rem;
+        width:73rem;
+    }
+    &-head{
+        @include flex(space-between,center);
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid $color_gray;
+        &-title{
+            font-size: 2.5rem;
+            color:$color_orange;
+        }
+        &-button{
+            background: transparent;
+            border:none;
+            color:$color_gray;
+            @include transition;
+            svg{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            &:hover{
+                color:$color_orange;
+            }
+        }
+    }
+    &-body{
+        margin-top:2rem;
+        @include flex();
+    }
+    &-image{
+        width:30rem;
+        height: 30rem;
+        img{
+            @include image;
+        }
+    }
+    &-detail{
+        flex:1;
+        @include flex(start,start,2rem,column);
+        &-title{
+            font-size: 2rem;
+            color:$color-black;
+        }
+        &-context{
+            @include flex(start,start,1rem,column);
+        }
+        &-group{
+            @include flex();
+            font-size: 1.7rem;
+            label{
+                color:$color_gray;
+                width: 6rem;
+            }
+            p{
+                flex:1;
+            }
+        }
+        &-button{
+            button{
+                padding:1rem 2rem;
+                border:0.1rem solid $color-gray;
+                background:transparent;
+                color:$color-gray;
+                @include transition;
+                &:hover{
+                    color:$color-white;
+                    border:0.1rem solid $color_orange;
+                    background:$color-orange;
+                }
+                &:first-child{
+                    margin-right: 2rem;
+                }
+            }
+        }
+        &-deliver{
+            width: 100%;
+            @include flex(space-between,center);
+            &-group{
+                text-align: center;
+                font-size: 1.5rem;
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                }
+                label{
+                    display: block
+                }
+                &.active{
+                    color:$color_orange;
+                }
+            }
+            &-line{
+                width: 100%;
+                height: 0.2rem;
+                background:rgba($color_gray,0.3);
+                border-radius: 2rem;
+            }
+        }
+    }
+}
+
+.notification{
+    @include overlay(101);
+    &-container{
+        background: $color_white;
+        padding:2rem;
+        border-radius: 2rem;
+        width:40rem;
+    }
+    &-head{
+        @include flex(space-between,center);
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid $color_gray;
+        &-title{
+            font-size: 2rem;
+            color:$color_black;
+        }
+        &-button{
+            background: transparent;
+            border:none;
+            color:$color_gray;
+            @include transition;
+            svg{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            &:hover{
+                color:$color_orange;
+            }
+        }
+    }
+    &-body{
+        margin-top:2rem;
+        text-align: center;
+        &-info{
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            color:$color_black;
+        }
+        &-button{
+            width: 100%;
+            padding:1rem;
+            background: transparent;
+            font-size: 1.5rem;
+            border:0.1rem solid $color_gray;
+            color:$color_gray;
+            @include transition;
+            &:hover{
+                color:$color_white;
+                background: $color_orange;
+                border: 0.1rem solid $color_orange;
+            }
+        }
+    }
+}
+
+.changeInfoUser{
+    @include overlay(1000);
+    &-container{
+        background:$color_white;
+        padding:2rem;
+        border-radius: 2rem;
+        width: 45rem;
+    }
+    &-head{
+        @include flex(space-between,center);
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid $color_gray;
+        &-title{
+            font-size: 2rem;
+            color:$color_black;
+        }
+        &-button{
+            background: transparent;
+            border:none;
+            color:$color_gray;
+            @include transition;
+            svg{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            &:hover{
+                color:$color_orange;
+            }
+        }
+    }
+    &-form{
+        margin-top:2rem;
+        &-group{
+            margin-bottom: 2rem;
+            label{
+                display: block;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: $color_gray;
+            }
+            input{
+                width: 100%;
+                padding:1rem;
+                font-size: 1.5rem;
+                border-radius: 2rem;
+                border:0.1rem solid $color_gray;
+                @include transition;
+                &:focus{
+                    border:0.1rem solid $color_orange;
+                    color:$color_orange;
+                }
+            }
+        }
+        &-button{
+            width: 100%;
+            padding:1rem;
+            text-align: center;
+            font-size: 1.6rem;
+            color:$color_gray;
+            background-color: transparent;
+            border:0.1rem solid $color_gray;
+            border-radius: 2rem;
+            @include transition;
+            &:hover{
+                color:$color_white;
+                background: $color_orange;
+                border:0.1rem solid $color_orange;
+            }
+        }
+    }
+    &-footer{
+        @include flex(space-between,center);
+        margin:2rem 0;
+        font-size: 1.5rem;
+        p{
+            color:$color_gray;
+        }
+        a{
+            @include transition;
+            color:rgba($color_orange,0.7)
+        }
+        a:hover{
+            color:$color_orange;
+        }
+    }
+    &-social{
+        text-align: center;
+        font-size: 1.5rem;
+        color:$color_gray;
+        &-list{
+            margin-top: 2rem;
+            @include flex(center,center);
+            a{
+                @include transition;
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            a:hover{
+                color:$color_orange;
+            }
+        }
+    }
+}
+
+.login{
+    @include overlay;
+    &-container{
+        background:$color_white;
+        padding:2rem;
+        border-radius: 2rem;
+        width: 45rem;
+    }
+    &-head{
+        @include flex(space-between,center);
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid $color_gray;
+        &-title{
+            font-size: 2rem;
+            color:$color_black;
+        }
+        &-button{
+            background: transparent;
+            border:none;
+            color:$color_gray;
+            @include transition;
+            svg{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            &:hover{
+                color:$color_orange;
+            }
+        }
+    }
+    &-form{
+        margin-top:2rem;
+        &-group{
+            margin-bottom: 2rem;
+            label{
+                display: block;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: $color_gray;
+            }
+            input{
+                width: 100%;
+                padding:1rem;
+                font-size: 1.5rem;
+                border-radius: 2rem;
+                border:0.1rem solid $color_gray;
+                @include transition;
+                &:focus{
+                    border:0.1rem solid $color_orange;
+                    color:$color_orange;
+                }
+            }
+        }
+        &-button{
+            width: 100%;
+            padding:1rem;
+            text-align: center;
+            font-size: 1.6rem;
+            color:$color_gray;
+            background-color: transparent;
+            border:0.1rem solid $color_gray;
+            border-radius: 2rem;
+            @include transition;
+            &:hover{
+                color:$color_white;
+                background: $color_orange;
+                border:0.1rem solid $color_orange;
+            }
+        }
+    }
+    &-footer{
+        @include flex(space-between,center);
+        margin:2rem 0;
+        font-size: 1.5rem;
+        p{
+            color:$color_gray;
+        }
+        a{
+            @include transition;
+            color:rgba($color_orange,0.7)
+        }
+        a:hover{
+            color:$color_orange;
+        }
+    }
+    &-social{
+        text-align: center;
+        font-size: 1.5rem;
+        color:$color_gray;
+        &-list{
+            margin-top: 2rem;
+            @include flex(center,center);
+            a{
+                @include transition;
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            a:hover{
+                color:$color_orange;
+            }
+        }
+    }
+}
+.signup{
+    @include overlay;
+    &-container{
+        background:$color_white;
+        padding:2rem;
+        border-radius: 2rem;
+        width: 45rem;
+    }
+    &-head{
+        @include flex(space-between,center);
+        padding-bottom: 2rem;
+        border-bottom: 0.1rem solid $color_gray;
+        &-title{
+            font-size: 2rem;
+            color:$color_black;
+        }
+        &-button{
+            background: transparent;
+            border:none;
+            color:$color_gray;
+            @include transition;
+            svg{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            &:hover{
+                color:$color_orange;
+            }
+        }
+    }
+    &-form{
+        margin-top:2rem;
+        &-group{
+            margin-bottom: 2rem;
+            label{
+                display: block;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: $color_gray;
+            }
+            input{
+                width: 100%;
+                padding:1rem;
+                font-size: 1.5rem;
+                border-radius: 2rem;
+                border:0.1rem solid $color_gray;
+                @include transition;
+                &:focus{
+                    border:0.1rem solid $color_orange;
+                    color:$color_orange;
+                }
+            }
+        }
+        &-button{
+            width: 100%;
+            padding:1rem;
+            text-align: center;
+            font-size: 1.6rem;
+            color:$color_gray;
+            background-color: transparent;
+            border:0.1rem solid $color_gray;
+            border-radius: 2rem;
+            @include transition;
+            &:hover{
+                color:$color_white;
+                background: $color_orange;
+                border:0.1rem solid $color_orange;
+            }
+        }
+    }
+    &-footer{
+        @include flex(space-between,center);
+        margin:2rem 0;
+        font-size: 1.5rem;
+        p{
+            color:$color_gray;
+        }
+        a{
+            @include transition;
+            color:rgba($color_orange,0.7)
+        }
+        a:hover{
+            color:$color_orange;
+        }
+    }
+    &-social{
+        text-align: center;
+        font-size: 1.5rem;
+        color:$color_gray;
+        &-list{
+            margin-top: 2rem;
+            @include flex(center,center);
+            a{
+                @include transition;
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            a:hover{
+                color:$color_orange;
+            }
+        }
+    }
+}
+
+.loader{
+    @include overlay(1000);
+    &-container{
+        background-color: $color_white;
+        padding:2rem;
+        width: 40rem;
+        border-radius: 2rem;
+        @include flex(center,center,1rem,column);
+        &-gif{
+            width: 10rem;
+            height: 10rem;
+            img{
+                @include image;
+            }
+        }
+        &-title{
+            font-size: 3rem;
+            color:$color_orange;
+        }
+    }
+}
+
+.notfound{
+    @include overlay;
+    &-container{
+        background-color: $color_white;
+        padding:2rem;
+        width: 40rem;
+        border-radius: 2rem;
+        @include flex(center,center,1rem,column);
+        &-image{
+            width: 100%;
+            height: 30rem;
+            img{
+                @include image;
+            }
+        }
+        &-description{
+            width: 100%;
+            text-align: center;
+            h2{
+                font-size: 3rem;
+                color:$color_orange;
+            }
+            a{
+                display: block;
+                padding:1rem;
+                text-align: center;
+                background-color: $color_orange;
+                color:$color_white;
+                width: 100%;
+                font-size: 2rem;
+                margin-top:2rem;
+            }
+        }
+    }
+}
+
+.product{
+    width:calc(25% - 5rem);
+    // width: 26.3rem;
+    border:0.1rem solid $color_gray;
+    border-radius: 2rem;
+    margin:2.5rem;
+    padding:1rem;
+    &-image{
+        height: 22.4rem;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        img{
+            @include image;
+        }
+    }
+    &-title{
+        font-size: 1.8rem;
+        @include limit_Detail;
+        margin-bottom: 1.5rem;
+        color:$color_black;
+    }
+    &-prices-add{
+        @include flex(space-between,center);
+    }
+    &-price{
+        font-size: 2.5rem;   
+        color:$color_orange;
+    }
+    &-button-add{
+        background: transparent;
+        border: none;
+        color:$color_orange;
+        svg{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+}

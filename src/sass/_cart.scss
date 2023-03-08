@@ -1,0 +1,190 @@
+.cart{
+    margin-top:15rem;
+    @include flex(start,start,5rem);
+    &-list{
+        flex:1;
+        border-radius: 2rem;
+        border:0.1rem solid $color_gray;
+        padding:2rem;
+        &-title{
+            font-size: 2.5rem;
+            color:$color_orange;
+            margin-bottom: 2rem;
+        }
+        &-head{
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding:2rem 0;
+            @include flex;
+            text-align: center;
+            &-product{
+                flex:3;
+            }
+            &-quality{
+                flex:1.5;
+            }
+            &-price,&-total{
+                flex:1;
+            }
+            &-trash{
+                flex:0.5;
+            }
+
+        }
+        &-item{
+            @include flex(start,start);
+            margin-bottom: 2rem;
+            &-product{
+                @include flex;
+                width: 41.9rem;
+                &-image{
+                    width:10rem;
+                    height: 10rem;
+                    img{
+                        @include image;
+                    }
+                }
+                &-name{
+                    flex:1;
+                    font-size: 1.5rem;
+                    @include limit_Detail;
+                }
+            }
+            &-price{
+                width: 13.9rem;
+                font-size: 2rem;
+                text-align: center;
+            }
+            &-quality{
+                width: 20.9rem;
+                @include flex(center,center);
+                font-size: 2rem;
+                &-button{
+                    background-color: transparent;
+                    border:none;
+                    svg{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+            &-total{
+                width: 13.9rem;
+                font-size: 2rem;
+                text-align: center;
+            }
+            &-trash{
+                width: 6.9rem;
+                border:none;
+                background-color: transparent;
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+
+    }
+    &-pay{
+        flex:0.5;
+        border-radius: 2rem;
+        border:0.1rem solid $color_gray;
+        padding:2rem;
+        &-title{
+            font-size: 2.5rem;
+            color:$color-orange;
+            margin-bottom: 2rem;
+            &-sub{
+                font-size: 2rem;
+                color:$color-orange;
+                margin: 2rem 0;
+            }
+        }
+
+        &-voucher{
+            label{
+                display: block;
+                font-size: 1.6rem;
+                color:$color_gray;
+                margin-bottom: 0.5rem;
+                svg{
+                    margin-right: 1rem;
+                }
+            }
+            input{
+                width: 100%;
+                padding:0.5rem 1rem;
+                font-size: 1.6rem;
+                border:0.1rem solid $color_gray;
+                @include transition;
+                &:focus{
+                    border:0.1rem solid $color_orange;
+                    color:$color_orange;
+                }
+            }
+        }
+        &-money{
+            @include flex(start,start,2rem,column);
+        }
+
+        &-group{
+            width: 100%;
+            @include flex(space-between,center);
+            label{
+                font-size: 1.6rem;
+                color:$color_gray;
+            }
+            h3{
+                font-size: 2rem;
+                color:$color_black;
+            }
+            h2{
+                font-size: 2.3rem;
+                color:$color_orange;
+            }
+        }
+
+        &-info{
+            @include flex(start,start,2rem,column);
+            width: 100%;
+            &-group{
+                width: 100%;
+                label{
+                    display: block;
+                    font-size: 1.5rem;
+                    margin-bottom: 0.5rem;
+                    color:$color_gray;
+                }
+                input{
+                    width: 100%;
+                    border:0.1rem solid $color_gray;
+                    border-radius: 2rem;
+                    padding:0.5rem 2rem;
+                    font-size: 1.5rem;
+                    @include transition;
+                    &:focus{
+                        border:0.1rem solid $color_orange;
+                        color:$color_orange;
+
+                    }
+                }
+            }
+        }
+        &-button{
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            color:$color_gray;
+            background: transparent;
+            border:0.1rem solid $color_gray;
+            @include transition;
+            padding:1rem;
+            &:hover{
+                color:$color_white;
+                background: $color_orange;
+                border:0.1rem solid $color_orange;}
+        }
+        
+    }
+}

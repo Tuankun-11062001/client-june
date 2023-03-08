@@ -1,0 +1,83 @@
+.slide{
+    border:0.1rem solid $color_gray;
+    border-radius: 2rem;
+    height: 40rem;
+    padding:2rem;
+    .slider-item{
+        display: flex !important;
+        justify-content: start;
+        align-items: center;
+        gap:5rem;
+        &-info{
+            @include flex(start,start,2rem,column);
+            width:46rem;
+            &-title{
+                opacity: 0;
+                font-size: 3.5rem;
+                color:$color_black;
+                @include transition(all,1.5s,ease-in);
+                // transition-duration: 1.5s;
+            }
+            &-description{
+                opacity: 0;
+                @include transition(all,1.7s,ease-in);
+                // transition-duration: 1.7s;
+                font-size: 1.5rem;
+                color:$color_gray;
+            }
+            &-button{
+                opacity: 0;
+                @include transition(all,2s,ease-in);
+                // transition-duration: 2s;
+                padding:1rem 3rem;
+                border:0.1rem solid $color_gray;
+                background-color: transparent;
+                font-size: 1.5rem;
+                @include transition;
+                &:hover{
+                    color:$color_white;
+                    background: $color_orange;
+                border:0.1rem solid $color_orange;
+                    
+                }
+            }
+        }
+        &-image{
+            flex:1;
+            height: 35rem;
+            opacity: 0;
+            @include transition(all,2s,ease-in);
+            img{
+                @include image;
+            }
+        }
+    }
+}
+
+.slick-dots{
+    right: 0;
+    text-align: unset;
+    width: max-content;
+}
+.slick-dots li button:before {
+    font-size: 1.6rem;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: $color_orange;
+}
+.slick-arrow{
+    display: none !important;
+}
+.slick-active .slider-item-info-title{
+    opacity: 1;
+}
+.slick-active .slider-item-info-description{
+    opacity: 1;
+}
+.slick-active .slider-item-info-button{
+    opacity: 1;
+}
+.slick-active .slider-item-image{
+    opacity: 1;
+}

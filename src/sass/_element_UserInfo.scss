@@ -1,0 +1,71 @@
+.id2{
+    @include flex(center,center,5rem,column);
+    &-title{
+        font-size: 3rem;
+        color:$color-orange;
+    }
+    &-form{
+        @include flex(start,start,2rem,column);
+        width:40rem;
+        &-group{
+            width: 100%;
+            label{
+                display: block;
+                font-size: 1.6rem;
+                color:$color-gray;
+                margin-bottom: 1rem;
+            }
+            input{
+                width: 100%;
+                padding:0.8rem 1rem;
+                border-radius: 2rem;
+                font-size: 1.6rem;
+                border: 0.1rem solid $color-gray;
+                @include transition;
+                &:focus{
+                    border: 0.1rem solid $color-orange;
+                    color:$color-orange;
+                }
+            }
+        }
+        &-change{
+            padding:1rem 3rem;
+            position: relative;
+            left:50%;
+            translate: -50%;
+            border:0.1rem solid $color-gray;
+            background: transparent;
+            color:$color-gray;
+            @include transition;
+            &:hover{
+                background:$color-orange;
+                color:$color-white;
+                border:0.1rem solid $color-orange;
+            }
+        }
+    }
+}
+
+.id3{
+    &-title{
+        font-size: 3rem;
+        color:$color-orange;
+        text-align: center;
+    }
+}
+
+.id4{
+    &-title{
+        font-size: 3rem;
+        color:$color-orange;
+        text-align: center;
+    }
+}
+
+.id5{
+    &-title{
+        font-size: 3rem;
+        color:$color-orange;
+        text-align: center;
+    }
+}

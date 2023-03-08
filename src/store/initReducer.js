@@ -1,11 +1,20 @@
 const initBox = {
-  openBox: true,
+  openNotificationBox: false,
+  openEditUserBox: false,
+  openInformationDeliverCard: false,
+  openInformationBoughtCard: false,
 };
 
 const initApi = {
   loading: true,
+  clickLoading: false,
   data: [],
   error: "",
 };
 
-export { initBox, initApi };
+const initLocal = {
+  user: {},
+  cart: {},
+};
+
+export { initBox, initApi, initLocal };

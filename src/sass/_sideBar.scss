@@ -1,0 +1,47 @@
+.sidebar{
+    position: fixed;
+    left:12rem;
+    top:15rem;
+    border:0.1rem solid $color_gray;
+    padding:2rem;
+    max-width: 40.5rem;
+    width: 40.5rem;
+    border-radius: 2rem;
+    &-item{
+        @include flex(space-between,center);
+        font-size: 2rem;
+        &:not(:first-child){
+            margin-top:2rem;
+        }
+        cursor: pointer;
+        @include transition;
+        svg{
+            cursor: pointer;
+            width:3rem;
+            height: 3rem;
+            g{
+                @include transition;
+            }
+        }
+        &-left{
+            cursor: pointer;
+            @include flex(start,center);
+        }
+        &-numberProduct{
+            font-size: 1.4rem;
+        }
+        &.active{
+            svg > g{
+                fill:$color_orange;
+            }
+            color:$color_orange;
+        }
+        &:hover{
+            svg > g{
+                fill:$color_orange;
+            }
+            color:$color_orange;
+        }
+        
+    }
+}

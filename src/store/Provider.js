@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
-import { ContextApi, ContextBox } from "./Context";
-import { initApi, initBox } from "./initReducer";
-import { reducerApi, reducerBox } from "./reducer";
+import { ContextApi, ContextBox, ContextLocal } from "./Context";
+import { initApi, initBox, initLocal } from "./initReducer";
+import { reducerApi, reducerBox, reducerLocal } from "./reducer";
 import logger from "./logger";
 const ProviderApi = ({ children }) => {
   const [stateApi, dispatchApi] = useReducer(logger(reducerApi), initApi);
@@ -21,4 +21,16 @@ const ProviderBox = ({ children }) => {
   );
 };
 
-export { ProviderApi, ProviderBox };
+const ProviderLocal = ({ children }) => {
+  const [stateLocal, dispatchLocal] = useReducer(
+    logger(reducerLocal),
+    initLocal
+  );
+  return (
+    <ContextLocal.Provider value={[stateLocal, dispatchLocal]}>
+      {children}
+    </ContextLocal.Provider>
+  );
+};
+
+export { ProviderApi, ProviderBox, ProviderLocal };

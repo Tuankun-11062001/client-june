@@ -1,0 +1,40 @@
+@mixin flex($justy:start,$align:stretch,$gap:2rem,$dir:row,$wrap:nowrap) {
+    display: flex;
+    justify-content: $justy;
+    align-items: $align;
+    gap:$gap;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+}
+
+@mixin transition($element:all,$time:0.3s,$style:ease-in) {
+    transition: $element $time $style;
+}
+
+@mixin image($obj:contain) {
+    width: 100%;
+    height: 100%;
+    object-fit: $obj;
+}
+
+@mixin limit_Detail($line:2){
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+}
+
+@mixin overlay($index:1) {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background:linear-gradient(50deg,rgba($color_orange,0.7),rgba($color_white,0.7));
+    @include flex(center,center);
+    z-index: $index;
+}

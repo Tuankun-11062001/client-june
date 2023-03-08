@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ContextApi, ContextBox } from "./Context";
+import { ContextApi, ContextBox, ContextLocal } from "./Context";
 
 const useContextApi = () => {
   const [stateApi, dispatchApi] = useContext(ContextApi);
@@ -11,4 +11,9 @@ const useContextBox = () => {
   return [stateBox, dispatchBox];
 };
 
-export { useContextApi, useContextBox };
+const useContextLocal = () => {
+  const [stateLocal, dispatchLocal] = useContext(ContextLocal);
+  return [stateLocal, dispatchLocal];
+};
+
+export { useContextApi, useContextBox, useContextLocal };
